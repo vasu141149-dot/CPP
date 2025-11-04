@@ -1,0 +1,14 @@
+#include<iostream> 
+using namespace std; 
+class Rectangle 
+{ 
+private: 
+int l,b; 
+public: 
+}; 
+int main() 
+{ 
+Rectangle r; 
+r.input(10,20); 
+r.area(); 
+} 
