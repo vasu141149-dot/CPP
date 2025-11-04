@@ -1,0 +1,67 @@
+#include<iostream> 
+using namespace std; 
+class shapes{ 
+ public: 
+  virtual void area()=0; 
+}; 
+class Rectangle:public shapes 
+{ 
+ public: 
+  int l,b; 
+  Rectangle() 
+  { 
+   l=50; 
+   b=40; 
+  } 
+  void area(){ 
+   cout<<"Area of Rectangle="<<l*b<<endl; 
+  } 
+}; 
+class square:public shapes 
+{ 
+ public: 
+  int s; 
+  square(){ 
+   s=40; 
+  } 
+  void area(){ 
+   cout<<"Area of square="<<s*s<<endl; 
+  } 
+}; 
+class triangle:public shapes{ 
+ public: 
+  int b,h; 
+  triangle(){ 
+   b=10; 
+   b=20; 
+  } 
+  void area(){ 
+   cout<<"Area of triangle="<<0.5*b*h<<endl; 
+  } 
+}; 
+class circle:public shapes 
+{ 
+public: 
+int r; 
+circle(){ 
+r=10; 
+} 
+void area(){ 
+cout<<"Area of  circle="<<3.14*r*r<<endl; 
+} 
+}; 
+int main(){ 
+shapes *sptr; 
+Rectangle r; 
+square s; 
+triangle t; 
+circle c; 
+sptr=&r; 
+sptr->area(); 
+sptr=&s; 
+sptr->area(); 
+sptr=&t; 
+sptr->area(); 
+sptr=&c; 
+sptr->area(); 
+}
